@@ -48,19 +48,21 @@ Arquivos: `src/services/authApi.js`, `src/context/AuthContext.js` + `AuthProvide
 | `/login` | `LoginPage` | Login simulado (Semana 6) |
 | `/perfil` | `PerfilPage` | Protegida — exige login; mostra dados buscados com o token |
 
-As três ficam aninhadas em uma rota pai com o `AppLayout`, que mostra o cabeçalho (título, navegação e botão de tema) em todas as páginas e renderiza a página atual no `<Outlet />`.
+As cinco ficam aninhadas em uma rota pai com o `AppLayout`, que mostra o cabeçalho (título, navegação e botão de tema) em todas as páginas e renderiza a página atual no `<Outlet />`.
 
 ```
 <Route path="/" element={<AppLayout />}>
   <Route index element={<HomePage />} />
   <Route path="forecast/:city" element={<ForecastPage />} />
   <Route path="about" element={<AboutPage />} />
+  <Route path="login" element={<LoginPage />} />
+  <Route path="perfil" element={<PerfilPage />} />
 </Route>
 ```
 
 ## Estrutura
 
-- `src/main.jsx` — envolve a aplicação com `BrowserRouter` e `ThemeProvider`.
+- `src/main.jsx` — envolve a aplicação com `BrowserRouter`, `ThemeProvider` e `AuthProvider`.
 - `src/App.jsx` — definição das rotas e do `Suspense` usado pela rota preguiçosa.
 - `src/components/AppLayout.jsx` — layout compartilhado com navegação e `<Outlet />`.
 - `src/context/ThemeContext.js` / `ThemeProvider.jsx` — tema claro/escuro global.

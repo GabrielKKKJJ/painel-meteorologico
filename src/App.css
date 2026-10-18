@@ -60,6 +60,16 @@ header {
   margin: 8px 0;
 }
 
+.weather-display ul {
+  list-style: none;
+  margin: 16px 0 0;
+  padding: 0;
+  display: flex;
+  justify-content: center;
+  gap: 24px;
+  flex-wrap: wrap;
+}
+
 .weather-display.status.erro {
   color: #d33;
 }
