@@ -26,7 +26,7 @@ npm install
 npm test
 ```
 
-20 testes (**Vitest**, não Jest — o enunciado cita Jest, mas este é um projeto Vite, e o Vitest é o test runner equivalente para projetos Vite: mesma API `describe`/`test`/`expect`, `vi.fn`/`vi.stubGlobal` no lugar de `jest.fn`/`jest.mock`; React Testing Library + jsdom são os mesmos dos dois). Cobertura: 3 componentes (`SearchBar`, `WeatherDisplay`, `ThemeSwitcher`), o hook `useFetch` (`fetch` mockado com `vi.stubGlobal`, cobrindo sucesso, erro HTTP e falha de rede) e `authApi` (login válido/inválido, `buscarPerfil` com e sem token).
+20 testes (**Vitest**, o test runner equivalente ao Jest para projetos Vite: mesma API `describe`/`test`/`expect`, `vi.fn`/`vi.stubGlobal` no lugar de `jest.fn`/`jest.mock`; React Testing Library + jsdom são os mesmos dos dois). Cobertura: 3 componentes (`SearchBar`, `WeatherDisplay`, `ThemeSwitcher`), o hook `useFetch` (`fetch` mockado com `vi.stubGlobal`, cobrindo sucesso, erro HTTP e falha de rede) e `authApi` (login válido/inválido, `buscarPerfil` com e sem token).
 
 ## Autenticação (Semana 6)
 
