@@ -27,7 +27,6 @@ function LoginPage() {
   return (
     <section className="card">
       <h2>Entrar</h2>
-      <p className="status">Login simulado — use usuário "demo" e senha "demo123".</p>
       <form onSubmit={handleSubmit} className="auth-card">
         <input
           type="text"
