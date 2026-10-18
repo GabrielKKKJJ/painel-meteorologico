@@ -1,0 +1,87 @@
+.app {
+  min-height: 100vh;
+  padding: 32px 16px;
+  box-sizing: border-box;
+  text-align: center;
+  transition: background-color 0.2s, color 0.2s;
+}
+
+.app.light {
+  background: #f5f5f7;
+  color: #1a1a1a;
+}
+
+.app.dark {
+  background: #1a1a1f;
+  color: #f0f0f2;
+}
+
+header {
+  flex-wrap: wrap;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  gap: 16px;
+  margin-bottom: 24px;
+}
+
+.search-bar {
+  display: flex;
+  justify-content: center;
+  gap: 8px;
+  margin-bottom: 24px;
+}
+
+.search-bar input {
+  padding: 8px 12px;
+  border-radius: 6px;
+  border: 1px solid #999;
+  font-size: 16px;
+}
+
+.search-bar button,
+.theme-switcher {
+  padding: 8px 16px;
+  border-radius: 6px;
+  border: 1px solid #999;
+  cursor: pointer;
+  font-size: 16px;
+  background: transparent;
+  color: inherit;
+}
+
+.weather-display {
+  max-width: 320px;
+  margin: 0 auto;
+}
+
+.weather-display .temperatura {
+  font-size: 48px;
+  margin: 8px 0;
+}
+
+.weather-display.status.erro {
+  color: #d33;
+}
+
+nav {
+  display: flex;
+  gap: 12px;
+}
+
+.app a {
+  color: inherit;
+}
+
+nav a.active {
+  font-weight: bold;
+}
+
+.status {
+  text-align: center;
+}
+
+.about {
+  max-width: 480px;
+  margin: 0 auto;
+}
