@@ -9,9 +9,12 @@ function PerfilPage() {
 
   if (!autenticado) {
     return (
-      <section>
+      <section className="card">
         <p className="status">
-          Você precisa entrar para ver esta página. <Link to="/login">Ir para o login</Link>
+          Você precisa entrar para ver esta página.{' '}
+          <Link to="/login" className="link-sutil">
+            Ir para o login
+          </Link>
         </p>
       </section>
     );
@@ -23,17 +26,17 @@ function PerfilPage() {
   };
 
   return (
-    <section>
+    <section className="card">
       <h2>Perfil</h2>
       {isLoading && <p className="status">Carregando perfil...</p>}
       {error && <p className="status erro">{error}</p>}
       {data && (
-        <div>
-          <p>Usuário: {data.usuario}</p>
-          <p>Buscas favoritas: {data.buscasFavoritas.join(', ')}</p>
+        <div className="perfil-dados">
+          <p className="stat-chip">Usuário: {data.usuario}</p>
+          <p className="stat-chip">Buscas favoritas: {data.buscasFavoritas.join(', ')}</p>
         </div>
       )}
-      <button type="button" onClick={sair}>
+      <button type="button" className="theme-switcher perfil-sair" onClick={sair}>
         Sair
       </button>
     </section>

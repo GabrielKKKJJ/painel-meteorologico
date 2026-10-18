@@ -1,6 +1,6 @@
 function AboutPage() {
   return (
-    <section className="about">
+    <section className="about card">
       <h2>Sobre</h2>
       <p>
         Painel Meteorológico feito para o laboratório da Semana 4 de Desenvolvimento Web. Os

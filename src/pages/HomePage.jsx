@@ -6,7 +6,7 @@ function HomePage() {
 
   return (
     <section>
-      <p>Busque uma cidade para ver o clima atual.</p>
+      <p className="lead">Busque uma cidade para ver o clima atual.</p>
       <SearchBar onSearch={(cidade) => navigate(`/forecast/${encodeURIComponent(cidade)}`)} />
     </section>
   );

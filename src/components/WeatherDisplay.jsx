@@ -17,14 +17,17 @@ function WeatherDisplay({ dadosClima, isLoading, erro }) {
 
   return (
     <div className="weather-display">
+      <span className="weather-icon" aria-hidden="true">
+        {dadosClima.icone ?? '🌡️'}
+      </span>
       <h2>
         {dadosClima.cidade}, {dadosClima.pais}
       </h2>
       <p className="temperatura">{dadosClima.temperatura}°C</p>
-      <p>{dadosClima.condicao}</p>
-      <ul>
-        <li>Umidade: {dadosClima.umidade}%</li>
-        <li>Vento: {dadosClima.vento} km/h</li>
+      <p className="condicao">{dadosClima.condicao}</p>
+      <ul className="stats">
+        <li className="stat-chip">Umidade: {dadosClima.umidade}%</li>
+        <li className="stat-chip">Vento: {dadosClima.vento} km/h</li>
       </ul>
     </div>
   );

@@ -22,7 +22,9 @@ function ForecastPage() {
         isLoading={geo.isLoading || previsao.isLoading}
         erro={erro}
       />
-      <Link to="/">Nova busca</Link>
+      <Link to="/" className="link-sutil nova-busca">
+        Nova busca
+      </Link>
     </section>
   );
 }

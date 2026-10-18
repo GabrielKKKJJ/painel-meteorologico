@@ -26,6 +26,31 @@ export function descreverCodigoClima(codigo) {
   return DESCRICAO_POR_CODIGO[codigo] ?? 'Condição desconhecida';
 }
 
+// emoji por faixa de codigo WMO, pra dar um indicativo visual rapido do clima
+const ICONE_POR_CODIGO = {
+  0: '☀️',
+  1: '🌤️',
+  2: '⛅',
+  3: '☁️',
+  45: '🌫️',
+  48: '🌫️',
+  51: '🌦️',
+  53: '🌦️',
+  55: '🌦️',
+  61: '🌧️',
+  63: '🌧️',
+  65: '🌧️',
+  71: '🌨️',
+  73: '🌨️',
+  75: '🌨️',
+  80: '🌧️',
+  95: '⛈️',
+};
+
+export function iconePorCodigoClima(codigo) {
+  return ICONE_POR_CODIGO[codigo] ?? '🌡️';
+}
+
 export function urlGeocodificacao(nomeCidade) {
   return `${GEOCODING_URL}?name=${encodeURIComponent(nomeCidade)}&count=1&language=pt&format=json`;
 }
@@ -45,5 +70,6 @@ export function montarDadosClima(local, previsao) {
     umidade: previsao.current.relative_humidity_2m,
     vento: previsao.current.wind_speed_10m,
     condicao: descreverCodigoClima(previsao.current.weather_code),
+    icone: iconePorCodigoClima(previsao.current.weather_code),
   };
 }
